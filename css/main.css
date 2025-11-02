@@ -1,0 +1,146 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ————————————————————
+  My styles
+——————————————————————— */
+html {
+  font-size: 20px;
+  background-color: black;
+}
+
+@font-face {
+  font-family: 'happy';
+  src: url('../fonts/happy-times-at-the-ikob-webfont.woff2') format('woff2'),
+       url('../fonts/happy-times-at-the-ikob-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'happy';
+  src: url('../fonts/happy-times-at-the-ikob_italic-webfont.woff2') format('woff2'),
+       url('../fonts/happy-times-at-the-ikob_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Type */
+a {
+  color: inherit;
+  text-decoration: inherit;
+  transition: color 0.2;
+  font-style: italic;
+}
+
+:root {
+  --r: coral;
+  --g: coral;
+  --b: coral;
+}
+
+a:hover {
+  /* color: white; */
+  /* text-decoration: underline; */
+  color: rgb(var(--r), var(--g), var(--b));
+}
+
+p {
+  font-family: 'happy', sans-serif;
+  line-height: 1.15;
+  font-size: 1rem;
+  letter-spacing: 0.015em;
+  color: white;
+}
+
+em {
+  font-syle: italic;
+}
+
+::selection {
+  color: white;
+  background-color: rgba(0,0,0,0.99);
+}
+
+main {
+  padding: 2rem;
+  position: relative;
+}
+
+.textbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  padding: 1rem;
+  justify-content: flex-end;
+}
+
+.textbox > p {
+  max-width: 23rem;
+}
+
+main > canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@media all and (max-width: 450px) {
+  html {
+    font-size: 18px;
+  }
+}
